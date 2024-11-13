@@ -1,5 +1,11 @@
 # Language Teaching Ontology Patterns
 
+The repository contains the OWL-based ontology and N-ary relation patterns developed for urban planning, building construction, or language teaching, including code, graphical representations, and detailed documentation of design decisions.
+
+Part one focuses on identifying and modeling specific situations using N-ary relation patterns. By analyzing concepts from urban planning, building construction, and language teaching, four scenarios are identified and mapped using N-ary relations, with OWL code, graphical representations, and classifications provided for each.
+
+Part two involves the development of an ontology within a specific domain, such as urban planning, by reusing existing ontologies and patterns. The ontology includes at least 30 elements, such as classes and properties, along with natural language labels and descriptions. Key design decisions, such as the selection of relevant ontologies and the granularity of the model, are documented, and the final ontology is presented both in OWL format and graphically. The result is a comprehensive knowledge model that represents complex relationships and concepts in urban planning.
+
 ## Part 1
 
 <details>
@@ -68,7 +74,7 @@ graph TD
 </div>
 <br>
 
-#### OWL Code:
+#### OWL Code
 
 ```xml
 <Declaration>
@@ -168,7 +174,7 @@ graph TD
 </div>
 <br>
 
-#### OWL Code:
+#### OWL Code
 
 ```xml
 <Declaration>
