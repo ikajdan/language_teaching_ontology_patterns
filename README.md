@@ -1,10 +1,10 @@
 # Language Teaching Ontology Patterns
 
-The repository contains the OWL-based ontology and N-ary relation patterns developed for urban planning, building construction, or language teaching, including code, graphical representations, and detailed documentation of design decisions.
+The repository contains the OWL-based ontology and N-ary relation patterns developed for language teaching, including code, graphical representations, and detailed documentation of design decisions.
 
-Part one focuses on identifying and modeling specific situations using N-ary relation patterns. By analyzing concepts from urban planning, building construction, and language teaching, four scenarios are identified and mapped using N-ary relations, with OWL code, graphical representations, and classifications provided for each.
+Part one focuses on identifying and modeling specific situations using N-ary relation patterns. By analyzing concepts from language teaching, four scenarios are identified and mapped using N-ary relations, with OWL code, graphical representations, and classifications provided for each.
 
-Part two involves the development of an ontology within a specific domain, such as urban planning, by reusing existing ontologies and patterns. The ontology includes at least 30 elements, such as classes and properties, along with natural language labels and descriptions. Key design decisions, such as the selection of relevant ontologies and the granularity of the model, are documented, and the final ontology is presented both in OWL format and graphically. The result is a comprehensive knowledge model that represents complex relationships and concepts in urban planning.
+Part two involves the development of an ontology within a specific domain by reusing existing ontologies and patterns. The ontology includes 30 elements, such as classes and properties, along with natural language labels and descriptions. Key design decisions, such as the selection of relevant ontologies and the granularity of the model, are documented, and the final ontology is presented both in OWL format and graphically. The result is a comprehensive knowledge model that represents complex relationships and concepts in urban planning.
 
 ## Part 1
 
@@ -13,7 +13,7 @@ Part two involves the development of an ontology within a specific domain, such 
 
 The objective of this part is to identify at least 4 situations that should be modeled using an N-ary relation pattern.
 
-Situations should be identified in Wikipedia pages about (a) urban planning, (b) building construction or (c) language teaching as a second language. YUse Wikipedia in English or Spanish.
+Situations should be identified in Wikipedia pages about (a) urban planning, (b) building construction or (c) language teaching as a second language. Use Wikipedia in English or Spanish.
 
 For each situation you should provide:
 
@@ -337,7 +337,7 @@ A learner reaches the intermediate fluency stage in second-language acquisition.
 
 Juan is in the intermediate fluency stage with a vocabulary of 6000 words. He can express opinions like "I think the movie was interesting," but sometimes makes mistakes with more complex sentence structures.
 
-#### Wikipedia Page
+#### Source
 
 Based on: https://en.wikipedia.org/wiki/Second-language_acquisition#Krashen_stages
 
@@ -456,3 +456,221 @@ In order to describe this part, you should provide: the Wikipedia pages (URL) or
 </details>
 
 ---
+
+### Sources of Information
+
+The ontology was developed based on the following Wikipedia pages:
+
+  - [Bilingualism](https://en.wikipedia.org/wiki/Bilingualism)
+  - [Simultaneous bilingualism](https://en.wikipedia.org/wiki/Simultaneous_bilingualism)
+  - [Sequential bilingualism](https://en.wikipedia.org/wiki/Sequential_bilingualism)
+  - [Language acquisition](https://en.wikipedia.org/wiki/Language_acquisition)
+
+### Purpose of the Ontology
+
+The ontology will model the key concepts related language teaching as a second language, focusing on bilingualism and second language acquisition. It will capture various aspects of language learning and proficiency, such as the types of bilingualism (simultaneous and sequential), their language proficiency, language development, age factors, and the impact of language exposure on proficiency. The ontology should represent concepts, relationships, and properties in second language acquisition and bilingualism.
+
+### Reused Resources
+
+#### Ontologies and Patterns
+
+- **Dublin Core**: To describe general educational resources.
+- **Linguistic Linked Open Data (LLOD)**: Useful for capturing linguistic concepts and relationships.
+- **Open Education Ontology**: Relevant for educational strategies.
+
+#### **Selection Criteria**:
+- **Relevance**: These ontologies are related to language learning, proficiency, and bilingualism.
+- **Reusability**: These ontologies provide commonly used classes and properties in educational domains.
+- **Compatibility**: All ontologies are OWL-compatible, ensuring smooth integration.
+
+### Modeled Elements
+
+The following **30 elements** were modeled based on the sources:
+
+#### **Concepts:**
+
+1. **Simultaneous Bilingual**: A child who learns two languages from birth and grows up knowing both languages.
+
+2. **Sequential Bilingual**: A child who learns one language from birth and another at some point during childhood.
+
+3. **Language**: A system of communication used by people, either first or second language.
+
+4. **First Language**: A person’s first language, typically learned from birth.
+
+5. **Second Language**: A language learned after the first language, often later in life.
+
+6. **Proficiency**: The degree of skill and ability in a language, which can be influenced by age and exposure.
+
+7. **Age**: The age at which language acquisition starts or is developed.
+
+8. **Cognitive Development**: The development of mental skills, especially related to language and cognition.
+
+9. **Linguistic Milestone**: A developmental stage in language acquisition, such as vocabulary or grammar mastery.
+
+10. **Exposure**: The amount and quality of contact with a language, affecting proficiency.
+
+11. **Family Interaction**: Communication with family members, which influences language development.
+
+12. **Accent**: The distinct pronunciation of a language that can be influenced by age at acquisition.
+
+13. **Vocabulary**: The set of words a person knows in a language.
+
+14. **Grammar**: The rules governing the structure of sentences in a language.
+
+15. **Pronunciation**: The way words are pronounced, often affected by age when learning a second language.
+
+16. **Linguistic Error**: Mistakes in language production, such as incorrect grammar or vocabulary.
+
+17. **Phonology**: The study of sounds in a language, especially pronunciation differences in bilinguals.
+
+18. **Semantic Processing**: The process of understanding the meaning of words and sentences in a language.
+
+19. **Learning Context**: The environment or situation in which language acquisition takes place.
+
+20. **Cultural Context**: The cultural factors that influence language use and acquisition.
+
+#### **Properties:**
+21. **hasProficiencyLevel**: The proficiency level a learner has in a given language.
+
+22. **hasAge**: The age at which a child starts learning a language.
+
+23. **learnsFrom**: Indicates the relationship between the learner and the language(s) they acquire.
+
+24. **acquiresIn**: The context or environment in which language acquisition happens.
+
+25. **hasVocabularySize**: The number of words a person knows in a language.
+
+26. **hasAccent**: The presence of a specific accent in a person’s second language pronunciation.
+
+27. **hasLinguisticError**: The errors made during language use, related to proficiency.
+
+28. **developsCognitiveSkills**: The relationship between language acquisition and cognitive development.
+
+29. **receivesExposure**: The relationship between a learner and their exposure to the language.
+
+30. **speaksWithFamily**: The interaction with family members that influences language learning.
+
+### **4. Graphical View**
+
+```mermaid
+graph TD
+  A[Bilingualism]
+  A --> B[Simultaneous Bilingual]
+  A --> C[Sequential Bilingual]
+  B --> D[Proficiency]
+  C --> D
+  D --> E[Vocabulary]
+  D --> F[Grammar]
+  D --> G[Pronunciation]
+  D --> H[Linguistic Error]
+  B --> I[Phonology]
+  C --> I
+  I --> J[Semantic Processing]
+  A --> K[First Language]
+  A --> L[Second Language]
+  B --> M[Exposure]
+  C --> M
+  M --> N[Family Interaction]
+  M --> O[Learning Context]
+  M --> P[Cultural Context]
+  P --> Q[Accent]
+  C --> R[Age]
+  R --> S[Proficiency Level]
+  A --> T[Cognitive Development]
+  T --> U[Linguistic Milestone]
+  T --> V[Develops Cognitive Skills]
+  D --> W[Receives Feedback]
+```
+
+<br>
+
+<div align="center">
+  <em>Graphical Representation of the Language Teaching Ontology.</em>
+</div>
+
+### OWL Code
+
+```xml
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns="http://example.org/bilingualism#">
+
+    <owl:Ontology rdf:about="http://example.org/bilingualism"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="#Bilingualism"/>
+    <owl:Class rdf:about="#SimultaneousBilingual"/>
+    <owl:Class rdf:about="#SequentialBilingual"/>
+    <owl:Class rdf:about="#Proficiency"/>
+    <owl:Class rdf:about="#Vocabulary"/>
+    <owl:Class rdf:about="#Grammar"/>
+    <owl:Class rdf:about="#Pronunciation"/>
+    <owl:Class rdf:about="#LinguisticError"/>
+    <owl:Class rdf:about="#Phonology"/>
+    <owl:Class rdf:about="#SemanticProcessing"/>
+    <owl:Class rdf:about="#FirstLanguage"/>
+    <owl:Class rdf:about="#SecondLanguage"/>
+    <owl:Class rdf:about="#Exposure"/>
+    <owl:Class rdf:about="#FamilyInteraction"/>
+    <owl:Class rdf:about="#LearningContext"/>
+    <owl:Class rdf:about="#CulturalContext"/>
+    <owl:Class rdf:about="#Accent"/>
+    <owl:Class rdf:about="#Age"/>
+    <owl:Class rdf:about="#ProficiencyLevel"/>
+    <owl:Class rdf:about="#CognitiveDevelopment"/>
+    <owl:Class rdf:about="#LinguisticMilestone"/>
+    <owl:Class rdf:about="#DevelopsCognitiveSkills"/>
+    <owl:Class rdf:about="#ReceivesFeedback"/>
+
+    <!-- Class Hierarchies -->
+    <rdfs:subClassOf rdf:resource="#Bilingualism" rdf:about="#SimultaneousBilingual"/>
+    <rdfs:subClassOf rdf:resource="#Bilingualism" rdf:about="#SequentialBilingual"/>
+    <rdfs:subClassOf rdf:resource="#SimultaneousBilingual" rdf:about="#Proficiency"/>
+    <rdfs:subClassOf rdf:resource="#SequentialBilingual" rdf:about="#Proficiency"/>
+    <rdfs:subClassOf rdf:resource="#Proficiency" rdf:about="#Vocabulary"/>
+    <rdfs:subClassOf rdf:resource="#Proficiency" rdf:about="#Grammar"/>
+    <rdfs:subClassOf rdf:resource="#Proficiency" rdf:about="#Pronunciation"/>
+    <rdfs:subClassOf rdf:resource="#Proficiency" rdf:about="#LinguisticError"/>
+    <rdfs:subClassOf rdf:resource="#Proficiency" rdf:about="#Phonology"/>
+    <rdfs:subClassOf rdf:resource="#Phonology" rdf:about="#SemanticProcessing"/>
+    <rdfs:subClassOf rdf:resource="#Bilingualism" rdf:about="#FirstLanguage"/>
+    <rdfs:subClassOf rdf:resource="#Bilingualism" rdf:about="#SecondLanguage"/>
+    <rdfs:subClassOf rdf:resource="#SimultaneousBilingual" rdf:about="#Exposure"/>
+    <rdfs:subClassOf rdf:resource="#SequentialBilingual" rdf:about="#Exposure"/>
+    <rdfs:subClassOf rdf:resource="#Exposure" rdf:about="#FamilyInteraction"/>
+    <rdfs:subClassOf rdf:resource="#Exposure" rdf:about="#LearningContext"/>
+    <rdfs:subClassOf rdf:resource="#Exposure" rdf:about="#CulturalContext"/>
+    <rdfs:subClassOf rdf:resource="#CulturalContext" rdf:about="#Accent"/>
+    <rdfs:subClassOf rdf:resource="#SequentialBilingual" rdf:about="#Age"/>
+    <rdfs:subClassOf rdf:resource="#Age" rdf:about="#ProficiencyLevel"/>
+    <rdfs:subClassOf rdf:resource="#Bilingualism" rdf:about="#CognitiveDevelopment"/>
+    <rdfs:subClassOf rdf:resource="#CognitiveDevelopment" rdf:about="#LinguisticMilestone"/>
+    <rdfs:subClassOf rdf:resource="#CognitiveDevelopment" rdf:about="#DevelopsCognitiveSkills"/>
+    <rdfs:subClassOf rdf:resource="#Proficiency" rdf:about="#ReceivesFeedback"/>
+
+    <!-- Properties -->
+    <owl:ObjectProperty rdf:about="#hasProficiency"/>
+    <owl:ObjectProperty rdf:about="#hasLanguage"/>
+    <owl:ObjectProperty rdf:about="#hasExposure"/>
+    <owl:ObjectProperty rdf:about="#hasFeedback"/>
+    <owl:ObjectProperty rdf:about="#hasContext"/>
+    <owl:ObjectProperty rdf:about="#hasAge"/>
+
+    <rdf:Description rdf:about="#SimultaneousBilingual">
+        <hasProficiency rdf:resource="#Proficiency"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#SequentialBilingual">
+        <hasProficiency rdf:resource="#Proficiency"/>
+        <hasAge rdf:resource="#Age"/>
+    </rdf:Description>
+</rdf:RDF>
+```
+
+### Design Decisions
+
+- **Granularity**: The ontology has a broad focus on linguistic and cognitive factors, making it versatile for educational research.
+- **Hierarchical Structure**: The ontology uses a clear hierarchical structure, starting with general concepts (e.g., **Bilingualism**) and breaking down into specific properties (e.g., **Proficiency**, **Accent**).
+- **Reusability**: Key ontologies like **Dublin Core** and **LLOD** are used to capture linguistic and educational concepts, ensuring that the ontology is compatible with future integrations or extensions.

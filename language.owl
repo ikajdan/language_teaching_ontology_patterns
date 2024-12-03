@@ -1,0 +1,76 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns="http://example.org/bilingualism#">
+
+    <owl:Ontology rdf:about="http://example.org/bilingualism"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="#Bilingualism"/>
+    <owl:Class rdf:about="#SimultaneousBilingual"/>
+    <owl:Class rdf:about="#SequentialBilingual"/>
+    <owl:Class rdf:about="#Proficiency"/>
+    <owl:Class rdf:about="#Vocabulary"/>
+    <owl:Class rdf:about="#Grammar"/>
+    <owl:Class rdf:about="#Pronunciation"/>
+    <owl:Class rdf:about="#LinguisticError"/>
+    <owl:Class rdf:about="#Phonology"/>
+    <owl:Class rdf:about="#SemanticProcessing"/>
+    <owl:Class rdf:about="#FirstLanguage"/>
+    <owl:Class rdf:about="#SecondLanguage"/>
+    <owl:Class rdf:about="#Exposure"/>
+    <owl:Class rdf:about="#FamilyInteraction"/>
+    <owl:Class rdf:about="#LearningContext"/>
+    <owl:Class rdf:about="#CulturalContext"/>
+    <owl:Class rdf:about="#Accent"/>
+    <owl:Class rdf:about="#Age"/>
+    <owl:Class rdf:about="#ProficiencyLevel"/>
+    <owl:Class rdf:about="#CognitiveDevelopment"/>
+    <owl:Class rdf:about="#LinguisticMilestone"/>
+    <owl:Class rdf:about="#DevelopsCognitiveSkills"/>
+    <owl:Class rdf:about="#ReceivesFeedback"/>
+
+    <!-- Class Hierarchies -->
+    <rdfs:subClassOf rdf:resource="#Bilingualism" rdf:about="#SimultaneousBilingual"/>
+    <rdfs:subClassOf rdf:resource="#Bilingualism" rdf:about="#SequentialBilingual"/>
+    <rdfs:subClassOf rdf:resource="#SimultaneousBilingual" rdf:about="#Proficiency"/>
+    <rdfs:subClassOf rdf:resource="#SequentialBilingual" rdf:about="#Proficiency"/>
+    <rdfs:subClassOf rdf:resource="#Proficiency" rdf:about="#Vocabulary"/>
+    <rdfs:subClassOf rdf:resource="#Proficiency" rdf:about="#Grammar"/>
+    <rdfs:subClassOf rdf:resource="#Proficiency" rdf:about="#Pronunciation"/>
+    <rdfs:subClassOf rdf:resource="#Proficiency" rdf:about="#LinguisticError"/>
+    <rdfs:subClassOf rdf:resource="#Proficiency" rdf:about="#Phonology"/>
+    <rdfs:subClassOf rdf:resource="#Phonology" rdf:about="#SemanticProcessing"/>
+    <rdfs:subClassOf rdf:resource="#Bilingualism" rdf:about="#FirstLanguage"/>
+    <rdfs:subClassOf rdf:resource="#Bilingualism" rdf:about="#SecondLanguage"/>
+    <rdfs:subClassOf rdf:resource="#SimultaneousBilingual" rdf:about="#Exposure"/>
+    <rdfs:subClassOf rdf:resource="#SequentialBilingual" rdf:about="#Exposure"/>
+    <rdfs:subClassOf rdf:resource="#Exposure" rdf:about="#FamilyInteraction"/>
+    <rdfs:subClassOf rdf:resource="#Exposure" rdf:about="#LearningContext"/>
+    <rdfs:subClassOf rdf:resource="#Exposure" rdf:about="#CulturalContext"/>
+    <rdfs:subClassOf rdf:resource="#CulturalContext" rdf:about="#Accent"/>
+    <rdfs:subClassOf rdf:resource="#SequentialBilingual" rdf:about="#Age"/>
+    <rdfs:subClassOf rdf:resource="#Age" rdf:about="#ProficiencyLevel"/>
+    <rdfs:subClassOf rdf:resource="#Bilingualism" rdf:about="#CognitiveDevelopment"/>
+    <rdfs:subClassOf rdf:resource="#CognitiveDevelopment" rdf:about="#LinguisticMilestone"/>
+    <rdfs:subClassOf rdf:resource="#CognitiveDevelopment" rdf:about="#DevelopsCognitiveSkills"/>
+    <rdfs:subClassOf rdf:resource="#Proficiency" rdf:about="#ReceivesFeedback"/>
+
+    <!-- Properties -->
+    <owl:ObjectProperty rdf:about="#hasProficiency"/>
+    <owl:ObjectProperty rdf:about="#hasLanguage"/>
+    <owl:ObjectProperty rdf:about="#hasExposure"/>
+    <owl:ObjectProperty rdf:about="#hasFeedback"/>
+    <owl:ObjectProperty rdf:about="#hasContext"/>
+    <owl:ObjectProperty rdf:about="#hasAge"/>
+
+    <rdf:Description rdf:about="#SimultaneousBilingual">
+        <hasProficiency rdf:resource="#Proficiency"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#SequentialBilingual">
+        <hasProficiency rdf:resource="#Proficiency"/>
+        <hasAge rdf:resource="#Age"/>
+    </rdf:Description>
+</rdf:RDF>
