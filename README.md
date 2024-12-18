@@ -468,7 +468,7 @@ The ontology was developed based on the following Wikipedia pages:
 
 ### Purpose of the Ontology
 
-The ontology will model the key concepts related language teaching as a second language, focusing on bilingualism and second language acquisition. It will capture various aspects of language learning and proficiency, such as the types of bilingualism (simultaneous and sequential), their language proficiency, language development, age factors, and the impact of language exposure on proficiency. The ontology should represent concepts, relationships, and properties in second language acquisition and bilingualism.
+The ontology will model the key concepts related to language teaching as a second language, focusing on bilingualism and second language acquisition. It will capture various aspects of language learning and proficiency, such as the types of bilingualism (simultaneous and sequential), their language proficiency, language development, age factors, and the impact of language exposure on proficiency. The ontology should represent concepts, relationships, and properties in second language acquisition and bilingualism.
 
 ### Reused Resources
 
@@ -490,67 +490,40 @@ The following **30 elements** were modeled based on the sources:
 #### **Concepts:**
 
 1. **Simultaneous Bilingual**: A child who learns two languages from birth and grows up knowing both languages.
-
 2. **Sequential Bilingual**: A child who learns one language from birth and another at some point during childhood.
-
 3. **Language**: A system of communication used by people, either first or second language.
-
 4. **First Language**: A person’s first language, typically learned from birth.
-
 5. **Second Language**: A language learned after the first language, often later in life.
-
 6. **Proficiency**: The degree of skill and ability in a language, which can be influenced by age and exposure.
-
 7. **Age**: The age at which language acquisition starts or is developed.
-
 8. **Cognitive Development**: The development of mental skills, especially related to language and cognition.
-
 9. **Linguistic Milestone**: A developmental stage in language acquisition, such as vocabulary or grammar mastery.
-
 10. **Exposure**: The amount and quality of contact with a language, affecting proficiency.
-
 11. **Family Interaction**: Communication with family members, which influences language development.
-
 12. **Accent**: The distinct pronunciation of a language that can be influenced by age at acquisition.
-
 13. **Vocabulary**: The set of words a person knows in a language.
-
 14. **Grammar**: The rules governing the structure of sentences in a language.
-
 15. **Pronunciation**: The way words are pronounced, often affected by age when learning a second language.
-
 16. **Linguistic Error**: Mistakes in language production, such as incorrect grammar or vocabulary.
-
 17. **Phonology**: The study of sounds in a language, especially pronunciation differences in bilinguals.
-
 18. **Semantic Processing**: The process of understanding the meaning of words and sentences in a language.
-
 19. **Learning Context**: The environment or situation in which language acquisition takes place.
-
 20. **Cultural Context**: The cultural factors that influence language use and acquisition.
 
 #### **Properties:**
+
 21. **hasProficiencyLevel**: The proficiency level a learner has in a given language.
-
 22. **hasAge**: The age at which a child starts learning a language.
-
 23. **learnsFrom**: Indicates the relationship between the learner and the language(s) they acquire.
-
 24. **acquiresIn**: The context or environment in which language acquisition happens.
-
 25. **hasVocabularySize**: The number of words a person knows in a language.
-
 26. **hasAccent**: The presence of a specific accent in a person’s second language pronunciation.
-
 27. **hasLinguisticError**: The errors made during language use, related to proficiency.
-
 28. **developsCognitiveSkills**: The relationship between language acquisition and cognitive development.
-
 29. **receivesExposure**: The relationship between a learner and their exposure to the language.
-
 30. **speaksWithFamily**: The interaction with family members that influences language learning.
 
-### **4. Graphical View**
+### **Graphical View**
 
 ```mermaid
 graph TD
